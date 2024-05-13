@@ -16,10 +16,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
 import { Link, Route, Routes, useLocation } from "react-router-dom";
-import License from "../License/License";
-import Accounts from "../Accounts/Acconts";
-import Configs from "../Configs/Configs";
-import Dashboard from "../Dashboard/Dashboard";
+
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
 import ArticleIcon from "@mui/icons-material/Article";
@@ -30,6 +27,10 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import profilepic from "../../assets/image/proifile.png";
 const drawerWidth = 240;
 import "./MainScreen.scss";
+import Receivings from "../Receivings/Receivings";
+import Products from "../Products/Products";
+import Recipes from "../Recipes/Recipes";
+import Orders from "../Orders/Orders";
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
   transition: theme.transitions.create("width", {
@@ -112,10 +113,10 @@ export default function MiniDrawer() {
     setOpen(false);
   };
   const tabs = [
-    { text: "Dashboard", path: "/Dashboard", icon: <DashboardIcon /> },
-    { text: "Accounts", path: "/Accounts", icon: <PersonIcon /> },
-    { text: "License", path: "/License", icon: <ArticleIcon /> },
-    { text: "Configs", path: "/Configs", icon: <SettingsSuggestIcon /> },
+    { text: "Receivings", path: "/Receivings", icon: <DashboardIcon /> },
+    { text: "Products", path: "/Products", icon: <PersonIcon /> },
+    { text: "Recipes", path: "/Recipes", icon: <ArticleIcon /> },
+    { text: "Orders", path: "/Orders", icon: <SettingsSuggestIcon /> },
     { text: "LogOut", path: "/Login", icon: <ExitToAppIcon /> },
   ];
 
@@ -241,14 +242,14 @@ export default function MiniDrawer() {
         }}
       >
         <Routes>
-          <Route path="/*" element={<Dashboard />} />
+          <Route path="/*" element={<Receivings />} />
 
-          <Route path="/Dashboard" element={<Dashboard />} />
-          <Route path="/Accounts" element={<Accounts />} />
-          <Route path="/License" element={<License />} />
-          <Route path="/Configs" element={<Configs />} />
+          <Route path="/Receivings" element={<Receivings />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/Recipes" element={<Recipes />} />
+          <Route path="/Orders" element={<Orders />} />
 
-          <Route path="/Login" element={<Login />} />
+          <Route path="/Suppliers" element={<Login />} />
         </Routes>
       </Box>
     </Box>
