@@ -1,6 +1,6 @@
 function Products() {
   return (
-    <div>
+    <div className="container">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem omnis
       laudantium, repellendus cumque quam fugiat est asperiores dolore sapiente
       quis ad sit suscipit rem sed, nam hic nihil exercitationem dolorum animi

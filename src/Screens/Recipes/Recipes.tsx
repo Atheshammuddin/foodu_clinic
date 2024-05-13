@@ -1,6 +1,6 @@
 function Recipes() {
   return (
-    <div>
+    <div className="container">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos illum illo
       consequuntur dolore atque quasi obcaecati labore officia aliquam aliquid
       officiis cupiditate nam corporis tempore molestiae laborum excepturi cum,

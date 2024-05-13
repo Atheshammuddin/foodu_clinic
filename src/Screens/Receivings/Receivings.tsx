@@ -1,11 +1,10 @@
-import React from 'react'
-
+import "../../css/global.scss";
 function Receivings() {
   return (
-    <div>
+    <div className="container">
       <h1>Receivings</h1>
     </div>
-  )
+  );
 }
 
-export default Receivings
+export default Receivings;

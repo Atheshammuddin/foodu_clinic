@@ -31,6 +31,7 @@ import Receivings from "../Receivings/Receivings";
 import Products from "../Products/Products";
 import Recipes from "../Recipes/Recipes";
 import Orders from "../Orders/Orders";
+import Suppliers from "../Supliers/Suppliers";
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
   transition: theme.transitions.create("width", {
@@ -117,6 +118,8 @@ export default function MiniDrawer() {
     { text: "Products", path: "/Products", icon: <PersonIcon /> },
     { text: "Recipes", path: "/Recipes", icon: <ArticleIcon /> },
     { text: "Orders", path: "/Orders", icon: <SettingsSuggestIcon /> },
+    { text: "Suppliers", path: "/Suppliers", icon: <SettingsSuggestIcon /> },
+
     { text: "LogOut", path: "/Login", icon: <ExitToAppIcon /> },
   ];
 
@@ -126,11 +129,12 @@ export default function MiniDrawer() {
       <AppBar position="fixed" open={open} sx={{ backgroundColor: "#ffff" }}>
         <Toolbar>
           <IconButton
-            color="inherit"
+            // color="black"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
             sx={{
+              color: "black",
               marginRight: 5,
               ...(open && { display: "none" }),
             }}
@@ -148,7 +152,8 @@ export default function MiniDrawer() {
               fontWeight: "600",
             }}
           >
-            Receiving
+            {location.pathname.substr(1).charAt(0).toUpperCase() +
+              location.pathname.substr(2)}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -239,6 +244,7 @@ export default function MiniDrawer() {
           p: 3,
           paddingTop: "60px",
           backgroundColor: "#F9FAFC",
+          height: "100vh",
         }}
       >
         <Routes>
@@ -249,7 +255,7 @@ export default function MiniDrawer() {
           <Route path="/Recipes" element={<Recipes />} />
           <Route path="/Orders" element={<Orders />} />
 
-          <Route path="/Suppliers" element={<Login />} />
+          <Route path="/Suppliers" element={<Suppliers />} />
         </Routes>
       </Box>
     </Box>
