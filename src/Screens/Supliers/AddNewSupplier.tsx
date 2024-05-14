@@ -1,6 +1,6 @@
 import InputField from "../../componnets/InputField";
 import { useForm } from "react-hook-form";
-
+import { useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 
@@ -16,6 +16,7 @@ const schema = z.object({
 });
 
 function AddNewSupplier() {
+  const navigate = useNavigate();
   const { control, handleSubmit } = useForm({
     defaultValues: {
       SupplierName: "",
@@ -35,7 +36,9 @@ function AddNewSupplier() {
   const Add = () => {
     handleSubmit(onSubmit)();
   };
-
+  const back = () => {
+    navigate("/Suppliers");
+  };
   return (
     <div className="container">
       <div className="grid grid-cols-12 gap-4">
@@ -100,7 +103,9 @@ function AddNewSupplier() {
       <div className="grid grid-cols-12">
         <div className="col-span-12">
           <div className="btnsGroup">
-            <button className="cancel">Cancel</button>
+            <button className="cancel" onClick={back}>
+              Cancel
+            </button>
             <button className="addbtn" onClick={Add}>
               Add
             </button>
