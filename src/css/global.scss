@@ -138,3 +138,71 @@ margin: 0 !important;
 width: 45px !important;
 height: 45px !important;
 }
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+  padding: 11.5px 14px !important;
+}
+
+
+.inptField{
+  width: 100%;
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+  padding: 8px 15px;
+  input{
+      width: 100%;
+      &:focus-visible {
+        outline: -webkit-focus-ring-color auto 0px !important;
+
+     }  
+    
+     &::placeholder {
+        color: var(--main-color) !important; /* Use the variable for color */
+        /* Choose your desired placeholder color */
+      }
+  }
+
+
+  select{
+    width: 100%;
+    &:focus-visible {
+      outline: -webkit-focus-ring-color auto 0px !important;
+
+   }  
+  
+   &::placeholder {
+      color: var(--main-color) !important; /* Use the variable for color */
+      /* Choose your desired placeholder color */
+    }
+display: block;
+  }
+}
+
+.inptFieldbox{
+  label{
+font-weight: 600;
+
+color:var(--main-color) ;
+  }
+  margin: 5px 0;
+}
+.error{
+  margin: 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: red;
+}
+.cancel{
+  border: 1px solid #D6DBDF;
+  border-radius: 4px;
+ 
+padding: 8px 20px;
+font-size: 15px;
+font-weight: 600;
+  color:var(--main-color);
+  transition: background-color 0.3s, transform 0.3s; /* Add transition for background-color and scale */
+&:hover {
+ /* Change background color on hover */
+    transform: scale(1.05); /* Increase scale on hover */
+  }
+
+}

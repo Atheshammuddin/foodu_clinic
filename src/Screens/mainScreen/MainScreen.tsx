@@ -32,6 +32,7 @@ import Products from "../Products/Products";
 import Recipes from "../Recipes/Recipes";
 import Orders from "../Orders/Orders";
 import Suppliers from "../Supliers/Suppliers";
+import AddNewSupplier from "../Supliers/AddNewSupplier";
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
   transition: theme.transitions.create("width", {
@@ -254,6 +255,7 @@ export default function MiniDrawer() {
           <Route path="/Products" element={<Products />} />
           <Route path="/Recipes" element={<Recipes />} />
           <Route path="/Orders" element={<Orders />} />
+          <Route path="/AddNewSupplier" element={<AddNewSupplier />} />
 
           <Route path="/Suppliers" element={<Suppliers />} />
         </Routes>

@@ -1,6 +1,6 @@
 import Header from "../../componnets/Header";
 import SuppliersTables from "./SuppliersTable";
-
+import { useNavigate } from "react-router-dom";
 interface supplier {
   name: string;
   email: string;
@@ -10,6 +10,7 @@ interface supplier {
 }
 
 function Suppliers() {
+  const navigate = useNavigate();
   const supplierdata: supplier[] = [
     {
       name: "jhon doe",
@@ -117,10 +118,12 @@ function Suppliers() {
       id: 15,
     },
   ];
-
+  const AddItems = () => {
+    navigate("/AddNewSupplier");
+  };
   return (
     <div className="container">
-      <Header />
+      <Header Addbtn={AddItems} />
       <SuppliersTables data={supplierdata} />
     </div>
   );
