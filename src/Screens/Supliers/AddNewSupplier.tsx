@@ -22,6 +22,7 @@ function AddNewSupplier() {
       email: "",
       Phone: "",
       Address: "",
+      Gender: "",
     },
     resolver: zodResolver(schema),
   });
@@ -70,9 +71,10 @@ function AddNewSupplier() {
         </div>
         <div className="col-span-6">
           <InputField
-            name="gender"
+            name="Gender"
             label="Gender"
             type="select"
+            placeholder={"Select"}
             control={control}
             options={[
               { label: "Male", value: "male" },

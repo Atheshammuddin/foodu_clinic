@@ -19,6 +19,9 @@ function InputField({ placeholder, label, type, control, name, options }: any) {
                 onChange={onChange}
                 onBlur={onBlur}
               >
+                <option value="" disabled selected>
+                  {placeholder}
+                </option>
                 {options.map((option: any, index: any) => (
                   <option key={index} value={option.value}>
                     {option.label}
