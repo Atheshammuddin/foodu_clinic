@@ -1,13 +1,115 @@
+import Header from "../../componnets/Header";
+import RecipesTable from "./RecipesTable";
+import { useNavigate } from "react-router-dom";
+interface recipes {
+  name: string;
+  servingSize: string;
+  costPerServing: number;
+  id: number;
+}
+
 function Recipes() {
+  const navigate = useNavigate();
+  const recipesdata: recipes[] = [
+    {
+      name: "Chiken biryani",
+      servingSize: "3 persons",
+      costPerServing: 400,
+      id: 1,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 2,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 3,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 4,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 5,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 6,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 7,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 8,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 9,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 10,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 11,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 12,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 13,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 14,
+    },
+    {
+      name: "Zinger Burgur",
+      servingSize: "7 persons",
+      costPerServing: 700,
+      id: 15,
+    },
+  ];
+  const AddItems = () => {
+    navigate("/AddRecipes");
+  };
+  console.log(recipesdata);
   return (
     <div className="container">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos illum illo
-      consequuntur dolore atque quasi obcaecati labore officia aliquam aliquid
-      officiis cupiditate nam corporis tempore molestiae laborum excepturi cum,
-      nobis hic. Eos deleniti voluptatum molestiae maxime quasi? Facere quasi
-      voluptatibus quae, voluptate totam eligendi in officia modi quas, quo
-      assumenda!
-      <h1>Recipes</h1>
+      <Header Addbtn={AddItems} />
+      <RecipesTable data={recipesdata} />
     </div>
   );
 }

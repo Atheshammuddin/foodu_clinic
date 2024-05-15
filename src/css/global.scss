@@ -1,208 +1,212 @@
 :root {
-    --main-color: #343A40;
-    --second-color:#007BFF;
-  }
-  
-body{
+  --main-color: #343a40;
+  --second-color: #007bff;
+}
+
+body {
   margin: 0 0 !important;
   padding: 0 0 !important;
 }
-.container{
-margin: 20px 0;
-background-color: white !important;
-padding: 10px;
-border-radius: 6px;
-font-family: "Poppins";
-height: 98%;
+.container {
+  margin: 20px 0;
+  background-color: white !important;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: "Poppins";
+  height: 98%;
+}
+.Header {
+  margin: 10px 0;
+}
+.searchBar {
+  width: 323px;
+  height: 47px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  input {
+    padding: 10px;
+    flex: 1;
+    &:focus-visible {
+      outline: -webkit-focus-ring-color auto 0px !important;
+    }
 
-}
-.Header{
-    margin: 10px 0;
-}
-.searchBar{
-    width: 323px;
+    &::placeholder {
+      color: var(--main-color) !important; /* Use the variable for color */
+      /* Choose your desired placeholder color */
+    }
+  }
+  button {
     height: 47px;
+    padding: 10px;
+    font-size: 22px;
+
+    color: #343a40 !important;
+    border-left: 1px solid #ced4da;
+  }
+}
+.btnsGroup {
+  float: right;
+  display: flex; /* Make it a flex container */
+  justify-content: flex-end; /* Align items to the right */
+  gap: 10px; /* Add gap between buttons */
+
+  .addbtn {
+    background-color: var(--second-color);
+    color: #fff;
+    border: 0;
+    padding: 8px 20px;
+    font-size: 15px;
+    font-weight: 600;
     border-radius: 4px;
-    border: 1px solid #CED4DA;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    input{
-         padding: 10px;
-         flex: 1;  &:focus-visible {
-            outline: -webkit-focus-ring-color auto 0px !important;
-    
-         }  
-        
-         &::placeholder {
-            color: var(--main-color) !important; /* Use the variable for color */
-            /* Choose your desired placeholder color */
-          }
-        
-        
-        
-        }
-    button{
-height: 47px;
-padding: 10px;
-font-size: 22px;
-
-color: #343A40 !important;
-border-left: 1px solid  #CED4DA;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for background-color and scale */
+    &:hover {
+      background-color: var(
+        --second-color
+      ); /* Change background color on hover */
+      transform: scale(1.05); /* Increase scale on hover */
     }
-}
-.btnsGroup{
-    float: right;
-    display: flex; /* Make it a flex container */
-    justify-content: flex-end; /* Align items to the right */
-    gap: 10px; /* Add gap between buttons */
-  
-    .addbtn{
-background-color:var(--second-color);
-color: #fff;
-border: 0;
-padding: 8px 20px;
-font-size: 15px;
-font-weight: 600;
-border-radius: 4px;
-transition: background-color 0.3s, transform 0.3s; /* Add transition for background-color and scale */
-&:hover {
-    background-color: var(--second-color); /* Change background color on hover */
-    transform: scale(1.05); /* Increase scale on hover */
+
+    //   &:active {
+    //     background-color: var(--second-color-active); /* Change background color on click */
+    //     transform: scale(0.95); /* Decrease scale on click */
+    //   }
   }
 
-//   &:active {
-//     background-color: var(--second-color-active); /* Change background color on click */
-//     transform: scale(0.95); /* Decrease scale on click */
-//   }
-
-
+  .exportbtn {
+    background-color: var(--main-color);
+    color: #fff;
+    border: 0;
+    padding: 8px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for background-color and scale */
+    &:hover {
+      background-color: var(
+        --main-color
+      ); /* Change background color on hover */
+      transform: scale(1.05); /* Increase scale on hover */
     }
-
-    .exportbtn{
-
-        background-color:var(--main-color);
-color: #fff;
-border: 0;
-padding: 8px 20px;
-font-size: 15px;
-font-weight: 600;
-border-radius: 4px;
-transition: background-color 0.3s, transform 0.3s; /* Add transition for background-color and scale */
-&:hover {
-    background-color: var(--main-color); /* Change background color on hover */
-    transform: scale(1.05); /* Increase scale on hover */
   }
-
-    }
 }
 
-
-
-.tables{
+.tables {
   height: 380px !important;
   min-height: 380px !important;
-
 }
 
-.pagesignation{
+.pagesignation {
   float: right !important;
   margin: 10px 0;
   position: unset !important;
 }
-.heads{
+.heads {
   font-size: 15px !important;
   font-weight: 600 !important;
   font-family: "Poppins";
 }
-.tbodys{
+.tbodys {
   font-weight: 400 !important;
   font-size: 15px !important;
-  color:var(--main-color) ;
-
+  color: var(--main-color);
 }
-.tabletn{
+.tabletn {
   display: flex;
   gap: 10px;
   font-size: 19px;
 }
-.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
-  background-color:var(--second-color) !important;
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: var(--second-color) !important;
   color: white !important;
-  border: 0!important;
+  border: 0 !important;
 }
 .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root {
-border-radius: 0px !important;
-margin: 0 !important;
-width: 45px !important;
-height: 45px !important;
+  border-radius: 0px !important;
+  margin: 0 !important;
+  width: 45px !important;
+  height: 45px !important;
 }
-.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
   padding: 11.5px 14px !important;
 }
 
-
-.inptField{
+.inptField {
   width: 100%;
-  border: 1px solid #CED4DA;
+  border: 1px solid #ced4da;
   border-radius: 4px;
   padding: 8px 15px;
-  input{
-      width: 100%;
-      &:focus-visible {
-        outline: -webkit-focus-ring-color auto 0px !important;
-
-     }  
-    
-     &::placeholder {
-        color: var(--main-color) !important; /* Use the variable for color */
-        /* Choose your desired placeholder color */
-      }
-  }
-
-
-  select{
+  input {
     width: 100%;
     &:focus-visible {
       outline: -webkit-focus-ring-color auto 0px !important;
+    }
 
-   }  
-  
-   &::placeholder {
+    &::placeholder {
       color: var(--main-color) !important; /* Use the variable for color */
       /* Choose your desired placeholder color */
     }
-display: block;
+  }
+
+  select {
+    width: 100%;
+    &:focus-visible {
+      outline: -webkit-focus-ring-color auto 0px !important;
+    }
+
+    &::placeholder {
+      color: var(--main-color) !important; /* Use the variable for color */
+      /* Choose your desired placeholder color */
+    }
+    display: block;
   }
 }
 
-.inptFieldbox{
-  label{
-font-weight: 600;
+.inptFieldbox {
+  label {
+    font-weight: 600;
 
-color:var(--main-color) ;
+    color: var(--main-color);
   }
   margin: 5px 0;
 }
-.error{
+.error {
   margin: 0 0;
   font-size: 12px;
   font-weight: 600;
   color: red;
 }
-.cancel{
-  border: 1px solid #D6DBDF;
+.cancel {
+  border: 1px solid #d6dbdf;
   border-radius: 4px;
- 
-padding: 8px 20px;
-font-size: 15px;
-font-weight: 600;
-  color:var(--main-color);
+
+  padding: 8px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--main-color);
   transition: background-color 0.3s, transform 0.3s; /* Add transition for background-color and scale */
-&:hover {
- /* Change background color on hover */
+  &:hover {
+    /* Change background color on hover */
     transform: scale(1.05); /* Increase scale on hover */
   }
-
+}
+.btn1 {
+  border: 1px solid #d6dbdf;
+  background-color: #ced4da48;
+  border-radius: 2px;
+  padding: 12px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.textarea {
+  min-height: 100px;
+  width: "100%";
+  resize: "none";
+  padding: "5px";
+  border-radius: 4px;
+  border: 1px solid #ced4da;
 }

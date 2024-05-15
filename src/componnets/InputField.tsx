@@ -28,6 +28,15 @@ function InputField({ placeholder, label, type, control, name, options }: any) {
                   </option>
                 ))}
               </select>
+            ) : type === "textarea" ? (
+              <textarea
+                id={name}
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+                onBlur={onBlur}
+                rows={8}
+              />
             ) : (
               <input
                 id={name}
